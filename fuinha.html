@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapa Mental Interativo - Debate Pró-Aborto</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+    color: #333;
+  }
+  header {
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  h1 { margin:0; }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+  }
+  .node {
+    background: #fff;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    max-width: 300px;
+    cursor: pointer;
+    position: relative;
+  }
+  .node.blue { border-left: 5px solid #2196F3; }
+  .node.red { border-left: 5px solid #F44336; }
+  .node.green { border-left: 5px solid #4CAF50; }
+  .node-content { display: none; margin-top: 10px; }
+  .node a { color: #2196F3; text-decoration: none; }
+  .center-node {
+    background: #FF9800;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    border-left: none;
+  }
+  footer { text-align: center; padding: 20px; background: #eee; margin-top: 30px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Mapa Mental Interativo - Debate Pró-Aborto</h1>
+</header>
+
+<div class="container">
+  <!-- Centro -->
+  <div class="node center-node" onclick="toggleNode(this)">
+    Legalização do Aborto
+    <div class="node-content">
+      <p>Mapa mental interativo com argumentos, contra-argumentos, exemplos de países e relação com subdesenvolvimento.</p>
+    </div>
+  </div>
+
+  <!-- Autonomia da Mulher -->
+  <div class="node blue" onclick="toggleNode(this)">
+    Autonomia e Direitos
+    <div class="node-content">
+      <p><strong>Argumento:</strong> Mulher decide sobre seu corpo, liberdade reprodutiva.</p>
+      <p><strong>Contra-argumento:</strong> Vida do feto desde a concepção.</p>
+      <p><strong>Resposta:</strong> Consciência fetal só após 24–28 semanas; Estado laico protege mãe e feto.</p>
+      <p><a href="https://g1.globo.com/" target="_blank">Fonte G1</a></p>
+    </div>
+  </div>
+
+  <!-- Saúde Pública -->
+  <div class="node blue" onclick="toggleNode(this)">
+    Saúde Pública
+    <div class="node-content">
+      <p><strong>Argumento:</strong> Abortos clandestinos são perigosos; legalização salva vidas.</p>
+      <p><strong>Contra-argumento:</strong> Alternativas como adoção.</p>
+      <p><strong>Resposta:</strong> Adoção não protege saúde; aborto seguro reduz mortalidade materna.</p>
+      <p><a href="https://www.nytimes.com/" target="_blank">Fonte NY Times</a></p>
+    </div>
+  </div>
+
+  <!-- Justiça Social -->
+  <div class="node blue" onclick="toggleNode(this)">
+    Justiça Social
+    <div class="node-content">
+      <p><strong>Argumento:</strong> Reduz desigualdade, garante acesso seguro a mulheres vulneráveis.</p>
+      <p><strong>Contra-argumento:</strong> Preservação da família e moral.</p>
+      <p><strong>Resposta:</strong> Forçar gestação aumenta pobreza e abandono; aborto planejado protege famílias.</p>
+      <p><a href="https://www.nytimes.com/" target="_blank">Fonte NY Times</a></p>
+    </div>
+  </div>
+
+  <!-- Violência Sexual -->
+  <div class="node blue" onclick="toggleNode(this)">
+    Proteção em Casos de Violência
+    <div class="node-content">
+      <p><strong>Argumento:</strong> Evita trauma físico e psicológico em casos de estupro.</p>
+      <p><strong>Contra-argumento:</strong> Valor moral da vida do feto.</p>
+      <p><strong>Resposta:</strong> Direitos humanos priorizam integridade da vítima; feto não tem consciência inicial.</p>
+      <p><a href="https://g1.globo.com/" target="_blank">Fonte G1</a></p>
+    </div>
+  </div>
+
+  <!-- Evidências Internacionais -->
+  <div class="node green" onclick="toggleNode(this)">
+    Exemplos de Países
+    <div class="node-content">
+      <ul>
+        <li>Portugal: Legalizado até 10 semanas (<a href="https://g1.globo.com/" target="_blank">notícia G1</a>)</li>
+        <li>Canadá: Legal desde 1988 (<a href="https://www.nytimes.com/" target="_blank">NY Times</a>)</li>
+        <li>Espanha: Legal desde 2010</li>
+        <li>Alemanha: Legal com restrições</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Subdesenvolvimento -->
+  <div class="node green" onclick="toggleNode(this)">
+    Associação com Subdesenvolvimento
+    <div class="node-content">
+      <p><strong>Países com aborto restrito:</strong> Maior mortalidade materna e infantil.</p>
+      <p><strong>Países com aborto legalizado:</strong> Melhor acesso a saúde e educação sexual.</p>
+      <p>Exemplos: Portugal, Canadá, Alemanha</p>
+      <p><a href="https://www.nytimes.com/" target="_blank">Fonte NY Times</a></p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>Mapa Mental Interativo - Debate Pró-Aborto | Informações baseadas em dados e notícias renomadas</p>
+</footer>
+
+<script>
+function toggleNode(element){
+  const content = element.querySelector('.node-content');
+  if(content.style.display === "block"){
+    content.style.display = "none";
+  } else {
+    content.style.display = "block";
+  }
+}
+</script>
+
+</body>
+</html>

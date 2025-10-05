@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debate Pró-Aborto - Mapa Mental Interativo</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    color: #333;
+  }
+
+  header {
+    background: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1, h2 {
+    margin: 0;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+
+  .topic {
+    background: #fff;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  }
+
+  .topic-header {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+
+  .topic-header.blue { background: #2196F3; color: white; }
+  .topic-header.red { background: #F44336; color: white; }
+  .topic-header.green { background: #4CAF50; color: white; }
+
+  .topic-content {
+    display: none;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+  }
+
+  .topic-content p {
+    margin: 10px 0;
+  }
+
+  .expand-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  footer {
+    text-align: center;
+    padding: 15px;
+    background: #eee;
+    margin-top: 30px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Debate Pró-Aborto - Mapa Mental Interativo</h1>
+</header>
+
+<div class="container">
+
+  <!-- Autonomia da Mulher -->
+  <div class="topic">
+    <div class="topic-header blue" onclick="toggleContent(this)">
+      Autonomia e Direitos da Mulher <button class="expand-btn">+</button>
+    </div>
+    <div class="topic-content">
+      <p><strong>Argumento:</strong> Mulher decide sobre seu corpo → liberdade reprodutiva e direitos humanos.</p>
+      <p><strong>Contra-argumento da oposição:</strong> Vida do feto tem prioridade desde a concepção.</p>
+      <p><strong>Resposta:</strong> Consciência e viabilidade do feto aparecem só mais tarde (24–28 semanas); leis protegem mãe e feto; Estado é laico.</p>
+    </div>
+  </div>
+
+  <!-- Saúde Pública -->
+  <div class="topic">
+    <div class="topic-header blue" onclick="toggleContent(this)">
+      Saúde Pública e Mortalidade Materna <button class="expand-btn">+</button>
+    </div>
+    <div class="topic-content">
+      <p><strong>Argumento:</strong> Abortos clandestinos matam milhares; legalização reduz mortes e complicações.</p>
+      <p><strong>Contra-argumento da oposição:</strong> Alternativas como adoção podem resolver.</p>
+      <p><strong>Resposta:</strong> Adoção não protege a saúde da mulher; aborto seguro reduz mortalidade.</p>
+    </div>
+  </div>
+
+  <!-- Justiça Social -->
+  <div class="topic">
+    <div class="topic-header blue" onclick="toggleContent(this)">
+      Justiça Social e Desigualdade <button class="expand-btn">+</button>
+    </div>
+    <div class="topic-content">
+      <p><strong>Argumento:</strong> Mulheres pobres sofrem mais com aborto ilegal; legalização reduz desigualdade.</p>
+      <p><strong>Contra-argumento da oposição:</strong> Preservação da família e moral.</p>
+      <p><strong>Resposta:</strong> Forçar gestação aumenta pobreza, abandono e maus-tratos; aborto seguro permite planejamento familiar.</p>
+    </div>
+  </div>
+
+  <!-- Violência Sexual -->
+  <div class="topic">
+    <div class="topic-header blue" onclick="toggleContent(this)">
+      Proteção em Casos de Violência Sexual <button class="expand-btn">+</button>
+    </div>
+    <div class="topic-content">
+      <p><strong>Argumento:</strong> Evita trauma psicológico e riscos físicos em casos de estupro.</p>
+      <p><strong>Contra-argumento da oposição:</strong> Valor moral da vida do feto.</p>
+      <p><strong>Resposta:</strong> Direitos humanos priorizam saúde e integridade da vítima; feto não tem consciência nesse estágio inicial.</p>
+    </div>
+  </div>
+
+  <!-- Evidências Internacionais -->
+  <div class="topic">
+    <div class="topic-header blue" onclick="toggleContent(this)">
+      Evidências Internacionais <button class="expand-btn">+</button>
+    </div>
+    <div class="topic-content">
+      <p><strong>Argumento:</strong> Países que legalizaram aborto (Portugal, Canadá, Espanha, Alemanha) reduziram mortalidade materna e abortos inseguros.</p>
+      <p><strong>Contra-argumento da oposição:</strong> Legalização banaliza a vida.</p>
+      <p><strong>Resposta:</strong> Estudos mostram que aborto seguro não aumenta número de abortos; proteção da vida da mulher é prioridade.</p>
+    </div>
+  </div>
+
+  <!-- Coerência Legal -->
+  <div class="topic">
+    <div class="topic-header blue" onclick="toggleContent(this)">
+      Coerência Legal e Proteção à Vida da Mulher <button class="expand-btn">+</button>
+    </div>
+    <div class="topic-content">
+      <p><strong>Argumento:</strong> Expansão do aborto é coerente com exceções já existentes (Brasil: estupro, risco de vida, anencefalia).</p>
+      <p><strong>Contra-argumento da oposição:</strong> Viabilidade do feto deve ser protegida.</p>
+      <p><strong>Resposta:</strong> Limites de semanas antes da viabilidade garantem proteção para mãe e feto; exceções em casos de risco ou anomalia grave.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>Mapa Mental Interativo - Debate Pró-Aborto | Dados e Evidências de Fontes Confiáveis</p>
+</footer>
+
+<script>
+function toggleContent(header) {
+  const content = header.nextElementSibling;
+  const btn = header.querySelector('.expand-btn');
+  if (content.style.display === "block") {
+    content.style.display = "none";
+    btn.textContent = "+";
+  } else {
+    content.style.display = "block";
+    btn.textContent = "-";
+  }
+}
+</script>
+
+</body>
+</html>
