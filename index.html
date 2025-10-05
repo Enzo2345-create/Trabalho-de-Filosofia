@@ -39,16 +39,56 @@
 
         /* Scroll suave */
         html { scroll-behavior: smooth; }
+        
+        /* Menu Mobile */
+        .menu-toggle { display:none; background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer; position:absolute; right:1rem; top:1rem; }
+        
+        /* Media Queries para Responsividade */
+        @media (max-width: 768px) {
+            /* Ajustes no cabeçalho */
+            header { padding:1rem; position:relative; }
+            header h1 { font-size:1.8rem; }
+            header p { font-size:1rem; }
+            
+            /* Menu mobile */
+            .menu-toggle { display:block; }
+            .container { flex-direction:column; }
+            nav { width:100%; max-height:0; overflow:hidden; transition:max-height 0.3s ease; }
+            nav.active { max-height:300px; }
+            nav ul { padding:0.5rem 0; }
+            
+            /* Conteúdo principal */
+            main { padding:1rem; max-height:none; }
+            section h2 { font-size:1.6rem; }
+            section h3 { font-size:1.3rem; }
+            
+            /* Ajustes de espaçamento */
+            section { margin-bottom:2rem; padding-bottom:0.5rem; }
+            
+            /* Listas */
+            ul { margin-left:1rem; }
+            
+            /* Destaques */
+            .highlight { padding:0.5rem; }
+        }
+        
+        @media (max-width: 480px) {
+            header h1 { font-size:1.5rem; }
+            header p { font-size:0.9rem; }
+            section h2 { font-size:1.4rem; }
+            section h3 { font-size:1.2rem; }
+        }
     </style>
 </head>
 <body>
     <header>
+        <button class="menu-toggle" aria-label="Abrir menu">☰</button>
         <h1>Legalização do Aborto</h1>
         <p>Debate completo: argumentos, contra-argumentos, estatísticas e referências internacionais</p>
     </header>
 
     <div class="container">
-        <nav>
+        <nav id="main-nav">
             <ul>
                 <li><a href="#grupos-argumentos">Grupos de Argumentos</a></li>
                 <li><a href="#argumentos-fortes">Argumentos Fortes</a></li>
@@ -196,6 +236,23 @@
             navLinks.forEach(link => link.classList.remove('active'));
             if (current) document.querySelector('nav ul li a[href*=' + current + ']').classList.add('active');
         });
+        
+        // Menu mobile toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.getElementById('main-nav');
+        
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+        
+        // Fechar menu ao clicar em um link (mobile)
+        navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                mainNav.classList.remove('active');
+            }
+        });
+    });
     </script>
 </body>
 </html>
